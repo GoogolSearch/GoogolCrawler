@@ -11,9 +11,11 @@ GoogolCrawler is the web crawler used by the Googol Search Engine to find new pa
 ## Requirements
 
 GoogolCrawler requires:
+ - Python 3
  - nltk
  - requests
  - BeautilfulSoup4
+ - SQLite3 (Included with Python)
  - [WaybackProxy](https://github.com/richardg867/WaybackProxy)
 
 ## Usage
@@ -23,6 +25,8 @@ After WaybackProxy has started, configure GoogolCrawler to use the urls desired,
 > Note: More URLs = More Threads. Only add what your machine can handle.
 > By default, GoogolCrawler will use 22 URLs, which means 22 threads, though this is not a limit/minimum.
 
+> Note: If you have a fresh install of NLTK, you may need to install `stopwords` and `tokenize`.
+
 GoogolCrawler will write all output data to `data.db`, an SQLite3 database.
 
 Here is an example of one row of data created by GoogolCrawler:
@@ -31,3 +35,9 @@ Here is an example of one row of data created by GoogolCrawler:
 | 3 | http://www.google.com      | Google     | web, search, tools |
 
 > Note: Tags are not HTML tags, they are the top 3 most common words on a page
+
+> Note: The table's name is `GlobalData`
+
+If you wanted to, for example, do a search for `Google`, you could use this SQL query:
+
+`SELECT * FROM GlobalData WHERE title LIKE "%Google%" OR tags LIKE "%Google%"`
