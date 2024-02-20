@@ -1,6 +1,7 @@
 GoogolCrawler
 =============
-![GitHub Release Date](https://img.shields.io/github/release-date/googolsearch/googolcrawler) ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/googolsearch/googolcrawler) ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/googolsearch/googolcrawler/total)
+![GitHub Release Date](https://img.shields.io/github/release-date/googolsearch/googolcrawler) ![GitHub commit activity](https://img.shields.io/github/commit-activity/w/googolsearch/googolcrawler) ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/googolsearch/googolcrawler/total) ![GitHub Release](https://img.shields.io/github/v/release/googolsearch/googolcrawler) ![GitHub forks](https://img.shields.io/github/forks/googolsearch/googolcrawler) 
+
 
 > Note: GoogolCrawler is designed for the Googol developers, and is not particularly user friendly.
 > There may also be bugs/glitches in GoogolCralwer, we are not responsible for any loss of data.
