@@ -138,14 +138,15 @@ try:
                             id INTEGER PRIMARY KEY,
                             url TEXT,
                             title TEXT,
-                            tags TEXT)''')
+                            tags TEXT,
+                            isAdvert INTEGER)''')
 
         # Insert data into the table
         for data_dict in globalData:
             url = data_dict.get("url")
             title = data_dict.get("title")
             tags = ", ".join(data_dict.get("tags"))  # Join the tags list into a comma-separated string
-            cursor.execute("INSERT INTO GlobalData (url, title, tags) VALUES (?, ?, ?)", (url, title, tags))
+            cursor.execute("INSERT INTO GlobalData (url, title, tags) VALUES (?, ?, ?, ?)", (url, title, tags, 0))
 
         # Commit changes and close connection
         conn.commit()
